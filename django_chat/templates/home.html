@@ -29,7 +29,30 @@
         </label>
     </div>
 
+    {% if user.is_authenticated %}
     <div class="title">
+        
+        <h1>WELCOME {{user.username}}!</h1>
+    </div>
+
+    <div class="welcome">
+        <p>Hello,</p>
+        <p>This is my first chatting app project.</p>
+    </div>
+    <br/>
+    <br/>
+    <span>
+        <a href="chatting">
+            <button id="btn1" href=''>GO CHATTING</button>
+        </a>        
+        
+        <a href="logout">
+            <button id="btn2">LOGOUT</button>
+        </a>
+    </span>
+    {% else %}
+    <div class="title">
+        
         <h1>WELCOME!</h1>
     </div>
 
@@ -40,8 +63,15 @@
     <br/>
     <br/>
     <span>
-        <button id="btn1">SIGN IN</button>
-        <button id="btn2">REGISTER</button>
+        <a href="login">
+            <button id="btn1">SIGN IN</button>
+        </a>
+
+        <a href="register">
+            <button id="btn2">REGISTER</button>
+        </a>
     </span>
+    {% endif %}
+
 </body>
 </html>

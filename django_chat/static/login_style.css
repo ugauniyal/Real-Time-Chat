@@ -1,0 +1,60 @@
+body{
+    background-color: lightgray;
+}
+
+.login-box{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+#title{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 6vw;
+}
+
+.login{
+    padding-top: 5%;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 24px;
+}
+
+.username{
+    width: 30%;
+    height: 36px;
+    border-radius: 20px;
+    border: 0;
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+    box-shadow: 1px 2px 5px black;
+}
+
+.password{ 
+    width: 30%;
+    height: 36px;
+    border-radius: 20px;
+    border: 0;
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+    box-shadow: 1px 2px 5px black;
+}
+
+.Submit{
+    background-color: #000000;
+    color: lightgray;
+    border-radius: 30px;
+    border: 2px;
+    outline: transparent;
+    width: 17%;
+    height: 9vh;
+    font-size: 2vw;
+    font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
+}
+
+.Submit:hover{
+    background-color: #000000d9;
+    transition: 0.3s ease;
+    
+}

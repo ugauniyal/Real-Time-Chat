@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>{{room}} - Room</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -74,8 +75,10 @@
               console.log(response);
               $("#display").empty();
               for (var key in response.messages)
-              {
+              {   
+                  
                   var temp="<div class='container darker'><b>"+response.messages[key].user+"</b><p>"+response.messages[key].value+"</p><span class='time-left'>"+response.messages[key].date+"</span></div>";
+                  console.log(response.messages[key])
                   $("#display").append(temp);
               }
           },

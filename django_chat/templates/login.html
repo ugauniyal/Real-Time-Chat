@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login_style.css' %}">
+    <script src="{% static 'login-script.js' %}" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+    
+    <div class="login-box">
+        <h1 id="title">LOGIN</h1>
+
+        <form class="login" method="POST" action="login">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input class="username" type="text" autocomplete="off" placeholder="Username" name="username">
+            <br/>
+            <br/>
+            <label for="password">Password:</label>
+            <input class="password" type="password" placeholder="Password" autocomplete="off" id="password" name="password">
+            <br/>
+            <br/>
+            <input type="checkbox" id="show" autocomplete="off" onclick="Login()">Show Password 
+            <br/>
+            <br/>
+            <br/>
+            <input class="Submit" type="submit" value="LOGIN">
+        </form>
+    </div>
+</body>
+</html>
