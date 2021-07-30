@@ -1,2 +1,2 @@
 # Real-Time-Chat
-A real time chat web app made using Django.
+A real time chat web app made using Django and AJAX
